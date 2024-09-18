@@ -14,9 +14,5 @@ Para utilizar o projeto, siga os seguintes passos:
         - Envie o comando ``streamlit run dashboard.py`` em um terminal distinto
 4. Acesse o endereço ``http://localhost:8501`` no seu navegador para visualizar o dashboard e realizar as previsões
 
-## Ferraments utilizadas
-- Python
-    - FastAPI
-    - Streamlit
-    - ARIMA
-    - Pandas
+## Escolha do modelo
+O modelo ARIMA é um modelo estatístico que utiliza a autocorrelação dos dados para prever valores futuros. Para este projeto, ele foi escolhido por ser um modelo simples, porém eficaz para séries temporais. Além disso, ele pode ser considerado versátil e flexível pela facilidade de ajustar os parâmetros do modelo. Por fim, suas previsões são baseadas em valores passados, o que é ideal para prever o possíveis valores de compras e vendas de ativos como é o caso deste projeto.

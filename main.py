@@ -12,7 +12,7 @@ arima_model = joblib.load('models/arima_model.pkl')
 app = FastAPI()
 
 # Sample dataframe (normally you would load this from a file)
-df = pd.read_csv('dados/Bitcoin_1Y_Normalizado.csv')
+df = pd.read_csv('data/Bitcoin_1Y_Normalizado.csv')
 df['timestamp'] = pd.to_datetime(df['timestamp'])  # Ensure timestamp is datetime type
 df.set_index('timestamp', inplace=True)
 
@@ -53,6 +53,3 @@ async def predict_price(request: PredictionRequest):
         ]
     }
     return prediction_data
-
-# To run the app use the command:
-# uvicorn filename:app --reload
