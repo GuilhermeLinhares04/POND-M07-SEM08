@@ -4,6 +4,7 @@ from typing import List
 from datetime import datetime
 import joblib
 import pandas as pd
+import logging
 
 # Load the ARIMA model
 arima_model = joblib.load('models/arima_model.pkl')
@@ -53,3 +54,13 @@ async def predict_price(request: PredictionRequest):
         ]
     }
     return prediction_data
+
+# Configure logging
+logging.basicConfig(filename='logs/predictions.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+
+# Middleware to log requests
+@app.middleware("http")
+async def log_requests(request, call_next):
+    response = await call_next(request)
+    logging.info(f"Request: {request.method} {request.url} - Status: {response.status_code}")
+    return response
