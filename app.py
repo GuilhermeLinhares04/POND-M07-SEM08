@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 # Load the ARIMA model
 arima_model = joblib.load('models/arima_model.pkl')
 
-# Load the dataset (assuming it's the same used for model training)
+# Load the dataset
 df = pd.read_csv('data/Bitcoin_1Y_Normalizado.csv')
-df['timestamp'] = pd.to_datetime(df['timestamp'])  # Ensure timestamp is datetime type
+df['timestamp'] = pd.to_datetime(df['timestamp'])  # Also making sure timestamp is datetime type
 df.set_index('timestamp', inplace=True)
 
 # Remove timezone information from the dataframe index

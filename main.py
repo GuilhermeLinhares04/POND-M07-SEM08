@@ -12,9 +12,9 @@ arima_model = joblib.load('models/arima_model.pkl')
 # Initialize the FastAPI app
 app = FastAPI()
 
-# Sample dataframe (normally you would load this from a file)
+# Sample dataframe with Bitcoin prices
 df = pd.read_csv('data/Bitcoin_1Y_Normalizado.csv')
-df['timestamp'] = pd.to_datetime(df['timestamp'])  # Ensure timestamp is datetime type
+df['timestamp'] = pd.to_datetime(df['timestamp'])  # Making sure timestamp is datetime type
 df.set_index('timestamp', inplace=True)
 
 # Request model for the API
