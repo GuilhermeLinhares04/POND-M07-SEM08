@@ -5,10 +5,10 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 
 # Load the ARIMA model
-arima_model = joblib.load('models/arima_model.pkl')
+arima_model = joblib.load('../models/arima_model.pkl')
 
 # Load the dataset
-df = pd.read_csv('data/Bitcoin_1Y_Normalizado.csv')
+df = pd.read_csv('../data/Bitcoin_1Y_Normalizado.csv')
 df['timestamp'] = pd.to_datetime(df['timestamp'])  # Also making sure timestamp is datetime type
 df.set_index('timestamp', inplace=True)
 
