@@ -30,6 +30,13 @@ To use the project, follow these steps:
         - Send the command ``streamlit run dashboard.py`` in a different terminal
 4. Access the address ``http://localhost:8501`` in your browser to view the dashboard and make predictions
 
+## Descrição do backend/Backend description
+O backend deste projeto foi feito realizado utilizando a biblioteca fastAPI. Seguindo o propósito do projeto, ele envia o modelo treinado previamente junto com os dados atualizados para uma rota _post_ denominada "predict". Esta rota recebe um JSON com os dados de datas de início e final da previsão, retornando um arquivo _.log_ com as previsões de compra e venda da Bitcoin.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+The backend of this project was done using the fastAPI library. Following the purpose of the project, it sends the previously trained model along with the updated data to a _post_ route called "predict". This route receives a JSON with the start and end date data of the prediction, returning a _.log_ file with the predictions of buying and selling Bitcoin.
+
 ## Escolha do modelo/Model choice
 O modelo ARIMA é um modelo estatístico que utiliza a autocorrelação dos dados para prever valores futuros. Para este projeto, ele foi escolhido por ser um modelo simples, porém eficaz para séries temporais. Além disso, ele pode ser considerado versátil e flexível pela facilidade de ajustar os parâmetros do modelo. Por fim, suas previsões são baseadas em valores passados, o que é ideal para prever o possíveis valores de compras e vendas de ativos como é o caso deste projeto.
 
@@ -53,3 +60,5 @@ Model retraining can be performed to seek more accurate predictions. To do this,
 3. Run the file ``exploration.ipynb`` to train the model with the new data
 
 The model will be trained with the new data and will be saved as a new file ``arima_model.pkl``, ready to be used in the dashboard.
+
+## Implementação do Docker/Docker implementation
