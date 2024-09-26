@@ -1,0 +1,4 @@
+2024-09-20 11:44:17,581 - Request: POST http://127.0.0.1:8000/predict - Status: 307
+2024-09-20 11:44:17,686 - Request: POST http://127.0.0.1:8000/predict/ - Status: 200
+2024-09-26 11:57:27,174 - Request: POST http://127.0.0.1:8000/predict - Status: 307
+2024-09-26 11:57:27,257 - Request: POST http://127.0.0.1:8000/predict/ - Status: 200

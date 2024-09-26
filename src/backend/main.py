@@ -7,13 +7,13 @@ import pandas as pd
 import logging
 
 # Load the ARIMA model
-arima_model = joblib.load('../models/arima_model.pkl')
+arima_model = joblib.load('models/arima_model.pkl')
 
 # Initialize the FastAPI app
 app = FastAPI()
 
 # Sample dataframe with Bitcoin prices
-df = pd.read_csv('../data/Bitcoin_1Y_Normalizado.csv')
+df = pd.read_csv('data/Bitcoin_1Y_Normalizado.csv')
 df['timestamp'] = pd.to_datetime(df['timestamp'])  # Making sure timestamp is datetime type
 df.set_index('timestamp', inplace=True)
 

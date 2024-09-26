@@ -4,3 +4,5 @@ matplotlib==3.8.3
 pandas==2.2.3
 pydantic==2.9.2
 streamlit==1.38.0
+statsmodels==0.14.2
+uvicorn==0.30.6
