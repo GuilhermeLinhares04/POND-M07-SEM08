@@ -1,13 +1,13 @@
 # Previsão de Preços Bitcoin/Bitcoin Price Prediction
 
 ## Sumário/Summary
-- [Introdução/Introduction](#introduçãointroduction)
-- [Como utilizar/How to use](#como-utilizarhow-to-use)
-- [Escolha do modelo/Model choice](#escolha-do-modelomodel-choice)
-- [Descrição do backend/Backend description](#descrição-do-backendbackend-description)
-- [Retreino do modelo/Model retraining](#retreino-do-modelomodel-retraining)
-- [Implementação do Docker/Docker implementation](#implementação-do-dockerdocker-implementation)
-- [Utilização de data lakes/Data lakes usage](#utilização-de-data-lakesdata-lakes-usage)
+1. [Introdução/Introduction](#introduçãointroduction)
+2. [Como utilizar/How to use](#como-utilizarhow-to-use)
+3. [Escolha do modelo/Model choice](#escolha-do-modelomodel-choice)
+4. [Descrição do backend/Backend description](#descrição-do-backendbackend-description)
+5. [Retreino do modelo/Model retraining](#retreino-do-modelomodel-retraining)
+6. [Implementação do Docker/Docker implementation](#implementação-do-dockerdocker-implementation)
+7. [Utilização de data lakes/Data lakes usage](#utilização-de-data-lakesdata-lakes-usage)
 
 ## Introdução/Introduction
 Este projeto consiste em um modelo de Machine Learning que prevê preços para compra e venda de ações da Bitcoin. Ele foi treinado com dados históricos da moeda de setembro de 2023 até setembro de 2024 e utiliza o modelo ARIMA para realizar as previsões.
@@ -26,6 +26,7 @@ Para utilizar o projeto, siga os seguintes passos:
     - Execução do frontend:
         - Envie o comando ``streamlit run dashboard.py`` em um terminal distinto
 4. Acesse o endereço ``http://localhost:8501`` no seu navegador para visualizar o dashboard e realizar as previsões
+5. Caso queira utilizar o Docker Compose, siga os passos descritos na seção [Implementação do Docker](#implementação-do-dockerdocker-implementation)
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -38,6 +39,7 @@ To use the project, follow these steps:
     - Frontend execution:
         - Send the command ``streamlit run dashboard.py`` in a different terminal
 4. Access the address ``http://localhost:8501`` in your browser to view the dashboard and make predictions
+5. If you want to use Docker Compose, follow the steps described in the [Docker Implementation](#implementação-do-dockerdocker-implementation) section
 
 ## Escolha do modelo/Model choice
 O modelo ARIMA é um modelo estatístico que utiliza a autocorrelação dos dados para prever valores futuros. Para este projeto, ele foi escolhido por ser um modelo simples, porém eficaz para séries temporais. Além disso, ele pode ser considerado versátil e flexível pela facilidade de ajustar os parâmetros do modelo. Por fim, suas previsões são baseadas em valores passados, o que é ideal para prever o possíveis valores de compras e vendas de ativos como é o caso deste projeto.

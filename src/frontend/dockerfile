@@ -1,18 +1,12 @@
-# Use uma imagem base para Python
 FROM python:3.9
 
-# Defina o diretório de trabalho no container
 WORKDIR /app
 
-# Copie o arquivo de requisitos e instale as dependências
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copie o conteúdo do diretório src/backend para o container
 COPY src/frontend/ .
 
-# Exponha a porta do FastAPI
 EXPOSE 8501
 
-# Comando para rodar o servidor FastAPI usando uvicorn
 CMD ["streamlit", "run", "app.py"]
